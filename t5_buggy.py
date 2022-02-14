@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Dr. Jan Pearce and Patrick Shepherd      TODO: Change this to your names
-# Username: pearcej, shepherdp                     TODO: Change this to your usernames
+# Author: Dr. Patrick Shepherd      TODO: Change this to your names
+# Username: shepherdp               TODO: Change this to your usernames
 #
 # Assignment: T5: Buggy Fruit
 # Purpose: A program to practice debugging on
