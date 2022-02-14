@@ -4,11 +4,6 @@
 #
 # Assignment: T5: Buggy Fruit
 # Purpose: A flawed birthday program
-#
-# Background:
-# The area of a circle is the number of square units inside that circle.
-# a formula for this area is a = PI * r**2 where PI is an irrational number
-# approximated by PI=3.141592
 ######################################################################
 # Acknowledgements:
 #   Original Author: Dr. Jan Pearce
