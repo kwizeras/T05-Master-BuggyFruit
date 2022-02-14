@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Jan Pearce and Patrick Shepherd   TODO: Change this to your names
-# Username: pearcej & shepherdp             TODO: Change this to your usernames
+# Author: Dr. Patrick Shepherd   TODO: Change this to your names
+# Username: shepherdp            TODO: Change this to your usernames
 #
 # Assignment: T04: Unit Testing
 #
@@ -18,31 +18,22 @@
 # Attribution-Noncommercial-Share Alike 3.0 United States License.
 ####################################################################################
 
-import sys
+from inspect import getframeinfo, stack
 
-TESTNUM = 1
-
-def mytest( did_pass ):
+def unittest(did_pass):
     """
     Print the result of a unit test.
-
-    This function works correctly--it is verbatim from the textbook, Chapter 6.
-
-    You should reuse this function anytime you are creating a custom test suite
-
-    :param passed_torf: Boolean representing if the unit test passed or failed
+    :param did_pass: a boolean representing the test
     :return: None
     """
 
-    global TESTNUM
-
+    caller = getframeinfo(stack()[1][0])
+    linenum = caller.lineno
     if did_pass:
-        msg = 'Test %d Passed' % TESTNUM
+        msg = "Test at line {0} ok.".format(linenum)
     else:
-        msg = 'Test %d Failed' % TESTNUM
+        msg = ("Test at line {0} FAILED.".format(linenum))
     print(msg)
-
-    TESTNUM += 1
 
 def pennies_testsuite():
     """
@@ -54,8 +45,8 @@ def pennies_testsuite():
     print("\nRunning pennies_testsuite()).")
 
     # Remember that i_steal_pennies() returns a list in the form [num_quarters, num_dimes, num_nickels, num_pennies]
-    mytest(i_steal_pennies(0.88) == [3, 1, 0, 3])  # because three quarters, 1 dime, and 3 pennies equals 88 cents
-    mytest(i_steal_pennies(0.89) == [3, 1, 0, 4])  # because three quarters, 1 dime, and 4 pennies equals 89 cents
+    unittest(i_steal_pennies(0.88) == [3, 1, 0, 3])  # because three quarters, 1 dime, and 3 pennies equals 88 cents
+    unittest(i_steal_pennies(0.89) == [3, 1, 0, 4])  # because three quarters, 1 dime, and 4 pennies equals 89 cents
 
     # TODO ADD MORE UNIT TESTS HERE!
 
