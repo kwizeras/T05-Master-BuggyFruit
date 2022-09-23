@@ -1,4 +1,4 @@
-# T05-Master-BuggyFruit
+# T05-BuggyFruit
 
 Name: ____________
 
