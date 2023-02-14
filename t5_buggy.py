@@ -41,6 +41,7 @@ def squared(x):
     # the same thing.
     answer = round(answer, 5)
     return answer
+
 def hypoteneuse(a, b):
     """
     Calculates the hypotenuse length on a triangle with other side lengths a and b
@@ -64,7 +65,6 @@ def hypoteneuse(a, b):
 def main():
     """
     Calculates the sum of two random numbers, compares it to a random sum. Should be correct 25% of the time
-
     :return: None
     """
 
