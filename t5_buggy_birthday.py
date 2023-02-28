@@ -12,17 +12,18 @@
 # Attribution-Noncommercial-Share Alike 3.0 United States License.
 ####################################################################################
 
-def happyBirthday(i, x):                   #FIXME: parameter names should be meaningful!! please fix!
-    '''Happy birthday function'''          #FIXME: example of useless docstring- please fix!
+def happyBirthday(name, age):
+    '''
+    Happy birthday function
+    '''
 
-    for i in range(x):
+    for i in range(age):
         print("Happy Birthday to you!")
 
-print("Happy Birthday, dear "+i+".")
+        print(f"Happy Birthday, dear {name} !")
 
-print("Happy Birthday to you!")
+        print("Happy Birthday to you!")
+def main():
+    happyBirthday("Felix", 4)                                  # name and number of times to loop
+main()
 
-happyBirthday('Felix', 4) # name and number of times to loop
-
-#FIXME: Where's the main function?! Please add a main, making sure that all code is wrapped in main() or happyBirthday()
-#FIXME: Call the happyBirthday() function from main() passing the two parameters needed.
